@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  line-height: 1.6;
 }
 
 header {
@@ -12,18 +13,22 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
 .nav-links a {
@@ -42,7 +47,7 @@ header {
   text-align: center;
   background: linear-gradient(to right, #0066ff, #33ccff);
   color: white;
-  padding: 50px 20px;
+  padding: 60px 20px;
 }
 
 .hero-content img {
@@ -50,20 +55,23 @@ header {
   height: 150px;
   border-radius: 50%;
   margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 button {
   background-color: #f39c12;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 24px;
   cursor: pointer;
   border-radius: 5px;
-  transition: background 0.3s ease;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
   background: #d35400;
+  transform: scale(1.05);
 }
 
 /* Sections */
@@ -74,20 +82,48 @@ section {
 
 h2 {
   margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
 }
 
+p {
+  color: #555;
+}
+
+/* Skills Section */
 .skills-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
+  gap: 20px;
   justify-content: center;
-  gap: 15px;
+  align-items: center;
+  padding: 20px 0;
 }
 
 .skill {
   background-color: #f39c12;
   color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
+  padding: 15px 10px;
+  border-radius: 8px;
   font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.skill:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 0.9rem;
 }
 
 /* Media Queries */
@@ -101,7 +137,7 @@ h2 {
 
   .nav-links {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
   }
 
   .hero-content img {
@@ -110,23 +146,27 @@ h2 {
   }
 
   .skills-grid {
-    flex-direction: column;
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+  }
+
+  button {
+    padding: 10px 20px;
   }
 }
 
 /* For phones (portrait) */
 @media (max-width: 480px) {
   header {
-    padding: 15px;
+    padding: 10px 15px;
   }
 
   .logo {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   .nav-links {
-    gap: 8px;
+    gap: 10px;
   }
 
   .hero-content img {
@@ -136,10 +176,16 @@ h2 {
 
   button {
     padding: 8px 16px;
+    font-size: 0.9rem;
   }
 
   .skills-grid {
-    flex-direction: column;
-    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .skill {
+    padding: 10px;
+    font-size: 0.9rem;
   }
 }
