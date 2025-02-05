@@ -1,15 +1,17 @@
 /* General Styles */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   line-height: 1.6;
+  background-color: #0a192f; /* Navy */
+  color: #ccd6f6; /* Light Teal */
 }
 
 header {
-  background-color: #222;
-  color: #fff;
+  background-color: #112240; /* Dark Navy */
+  color: #ccd6f6;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,12 +19,13 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
+  color: #64ffda; /* Teal */
 }
 
 .nav-links {
@@ -33,21 +36,35 @@ header {
 
 .nav-links a {
   text-decoration: none;
-  color: white;
+  color: #ccd6f6;
   font-weight: 400;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #f39c12;
+  color: #64ffda; /* Teal */
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #ccd6f6;
+  margin: 4px 0;
+  transition: all 0.3s ease;
 }
 
 /* Hero Section */
 #hero {
   text-align: center;
-  background: linear-gradient(to right, #0066ff, #33ccff);
-  color: white;
-  padding: 60px 20px;
+  background: linear-gradient(to right, #112240, #0a192f);
+  color: #ccd6f6;
+  padding: 100px 20px;
 }
 
 .hero-content img {
@@ -55,12 +72,12 @@ header {
   height: 150px;
   border-radius: 50%;
   margin-bottom: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(100, 255, 218, 0.3);
 }
 
 button {
-  background-color: #f39c12;
-  color: white;
+  background-color: #64ffda; /* Teal */
+  color: #0a192f; /* Navy */
   border: none;
   padding: 12px 24px;
   cursor: pointer;
@@ -70,30 +87,30 @@ button {
 }
 
 button:hover {
-  background: #d35400;
+  background: #52d1b2;
   transform: scale(1.05);
 }
 
 /* Sections */
 section {
-  padding: 50px 20px;
+  padding: 80px 20px;
   text-align: center;
 }
 
 h2 {
   margin-bottom: 20px;
-  font-size: 2rem;
-  color: #333;
+  font-size: 2.5rem;
+  color: #64ffda; /* Teal */
 }
 
 p {
-  color: #555;
+  color: #8892b0; /* Light Navy */
 }
 
 /* Skills Section */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 20px;
   justify-content: center;
   align-items: center;
@@ -101,91 +118,50 @@ p {
 }
 
 .skill {
-  background-color: #f39c12;
-  color: white;
-  padding: 15px 10px;
+  background-color: #112240; /* Dark Navy */
+  color: #64ffda; /* Teal */
+  padding: 20px;
   border-radius: 8px;
   font-weight: bold;
-  font-size: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-align: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 15px rgba(100, 255, 218, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(100, 255, 218, 0.4);
 }
 
 /* Footer */
 footer {
-  background-color: #222;
-  color: #fff;
+  background-color: #112240; /* Dark Navy */
+  color: #ccd6f6;
   text-align: center;
-  padding: 15px 20px;
+  padding: 20px;
   font-size: 0.9rem;
 }
 
 /* Media Queries */
-
-/* For tablets (portrait) */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-
   .nav-links {
+    display: none;
     flex-direction: column;
     gap: 15px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #112240;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   }
 
-  .hero-content img {
-    width: 120px;
-    height: 120px;
+  .nav-links.active {
+    display: flex;
   }
 
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 15px;
-  }
-
-  button {
-    padding: 10px 20px;
-  }
-}
-
-/* For phones (portrait) */
-@media (max-width: 480px) {
-  header {
-    padding: 10px 15px;
-  }
-
-  .logo {
-    font-size: 1.5rem;
-  }
-
-  .nav-links {
-    gap: 10px;
-  }
-
-  .hero-content img {
-    width: 100px;
-    height: 100px;
-  }
-
-  button {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
-
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-
-  .skill {
-    padding: 10px;
-    font-size: 0.9rem;
+  .menu-toggle {
+    display: flex;
   }
 }
