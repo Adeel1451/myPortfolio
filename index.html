@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adeel Ahmad Portfolio</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
   <header>
@@ -17,43 +18,48 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </nav>
   </header>
 
   <section id="hero">
     <div class="hero-content">
-      <img src="Pfp.jpg" alt="Profile Picture" class="profile-pic">
-      <h1>Hello, I'm <span>Adeel Ahmad</span></h1>
-      <p>A CS student and aspiring web developer. Passionate about coding and building impactful web experiences.</p>
-      <button onclick="scrollToSection('contact')">Let's Connect</button>
+      <img src="Pfp.jpg" alt="Profile Picture" class="profile-pic animate__animated animate__fadeIn">
+      <h1 class="animate__animated animate__fadeInUp">Hello, I'm <span>Adeel Ahmad</span></h1>
+      <p class="animate__animated animate__fadeInUp animate__delay-1s">A CS student and aspiring web developer. Passionate about coding and building impactful web experiences.</p>
+      <button onclick="scrollToSection('contact')" class="animate__animated animate__fadeInUp animate__delay-2s">Let's Connect</button>
     </div>
   </section>
 
   <section id="about">
-    <h2>About Me</h2>
-    <p>I am currently a 4th-semester BSCS student learning web development. I enjoy creating clean, responsive websites and constantly seek to enhance my skills through practice and innovation.</p>
+    <h2 class="animate__animated animate__fadeIn">About Me</h2>
+    <p class="animate__animated animate__fadeIn animate__delay-1s">I am currently a 4th-semester BSCS student learning web development. I enjoy creating clean, responsive websites and constantly seek to enhance my skills through practice and innovation.</p>
   </section>
 
   <section id="skills">
-    <h2>Skills</h2>
+    <h2 class="animate__animated animate__fadeIn">Skills</h2>
     <div class="skills-grid">
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">JavaScript</div>
+      <div class="skill animate__animated animate__fadeInLeft">HTML</div>
+      <div class="skill animate__animated animate__fadeInUp">CSS</div>
+      <div class="skill animate__animated animate__fadeInRight">JavaScript</div>
     </div>
   </section>
 
   <section id="projects">
-    <h2>Projects</h2>
-    <p>During my internship at <a href="https://drupak.com/" target="_blank">Drupak</a>, I worked on various practice projects that deepened my understanding of web development.</p>
+    <h2 class="animate__animated animate__fadeIn">Projects</h2>
+    <p class="animate__animated animate__fadeIn animate__delay-1s">During my internship at <a href="https://drupak.com/" target="_blank">Drupak</a>, I worked on various practice projects that deepened my understanding of web development.</p>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:adeelahmad1451@gmail.com">adeelahmad1451@gmail.com</a></p>
-    <p>Phone: <a href="tel:+923195665190">0319-5665190</a></p>
-    <h3>Hobbies</h3>
-    <p>Fitness, Chess</p>
+    <h2 class="animate__animated animate__fadeIn">Contact</h2>
+    <p class="animate__animated animate__fadeIn animate__delay-1s">Email: <a href="mailto:adeelahmad1451@gmail.com">adeelahmad1451@gmail.com</a></p>
+    <p class="animate__animated animate__fadeIn animate__delay-1s">Phone: <a href="tel:+923195665190">0319-5665190</a></p>
+    <h3 class="animate__animated animate__fadeIn animate__delay-2s">Hobbies</h3>
+    <p class="animate__animated animate__fadeIn animate__delay-2s">Fitness, Chess</p>
   </section>
 
   <footer>
